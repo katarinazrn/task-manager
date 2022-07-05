@@ -19,13 +19,13 @@ export function TasksContextProvider(props) {
     }, [currentBoardCtx.board.id]);
 
     function fetchTasks() {
-        fetch(`http://localhost:3000/tasks?boardId=${currentBoardCtx.board.id}`)
+        fetch(`${process.env.REACT_APP_DB_URL}/tasks?boardId=${currentBoardCtx.board.id}`)
             .then(res => res.json())
             .then(data => setTasks(data));
     }
 
     async function addTask(task) {
-        let res = await fetch('http://localhost:3000/tasks', {
+        let res = await fetch(`${process.env.REACT_APP_DB_URL}/tasks`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ export function TasksContextProvider(props) {
     }
 
     async function removeTask(id) {
-        let res = await fetch(`http://localhost:3000/tasks/${id}`, {
+        let res = await fetch(`${process.env.REACT_APP_DB_URL}/tasks/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -60,11 +60,14 @@ export function TasksContextProvider(props) {
 
     async function updateTask(task, statusChanged = false) {
 
+
+        console.log(task, statusChanged)
+
         if (statusChanged) {
             removeTask(task.id).then(() => addTask(task));
         }
         else {
-            let res = await fetch(`http://localhost:3000/tasks/${task.id}`, {
+            let res = await fetch(`${process.env.REACT_APP_DB_URL}/tasks/${task.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

@@ -22,7 +22,7 @@ function NewBoard(props) {
         const title = titleRef.current.value;
         if (title.trim() === '') return;
 
-        fetch('http://localhost:3000/boards', {
+        fetch(`${process.env.REACT_APP_DB_URL}/boards`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,6 +36,7 @@ function NewBoard(props) {
                 props.updateList();
                 currentBoardCtx.changeBoard(data);
                 setShowInput(false)
+                currentBoardCtx.setTotal(currentBoardCtx.totalBoards + 1);
             })
     }
 

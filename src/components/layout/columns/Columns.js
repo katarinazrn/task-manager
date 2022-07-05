@@ -17,7 +17,7 @@ function Columns(props) {
     }, []);
 
     function getStatuses() {
-        fetch('http://localhost:3000/statuses')
+        fetch(`${process.env.REACT_APP_DB_URL}/statuses`)
             .then(res => res.json())
             .then(data => setStatuses(data));
     }
@@ -35,7 +35,7 @@ function Columns(props) {
 
         if (name.trim() === '') return;
 
-        let res = await fetch('http://localhost:3000/statuses', {
+        let res = await fetch(`${process.env.REACT_APP_DB_URL}/statuses`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

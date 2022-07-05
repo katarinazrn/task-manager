@@ -39,10 +39,10 @@ function NewTask(props) {
     }
 
     function getStatuses() {
-        fetch('http://localhost:3000/statuses')
+        fetch(`${process.env.REACT_APP_DB_URL}/statuses`)
             .then(res => res.json())
             .then(data => {
-                setStatusId(data[0].id)
+                if (!props.editing) setStatusId(data[0].id)
                 setStatuses(data)
             });
     }

@@ -33,7 +33,7 @@ function TaskCard(props) {
     }
 
     function getStatuses() {
-        fetch('http://localhost:3000/statuses')
+        fetch(`${process.env.REACT_APP_DB_URL}/statuses`)
             .then(res => res.json())
             .then(data => setStatuses(data));
     }

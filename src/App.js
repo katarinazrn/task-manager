@@ -9,7 +9,7 @@ function App() {
   const [sidebarVisible, setSidebarVisible] = useState(true);
 
   async function getAllTasks() {
-    const res = await fetch('http://localhost:3000/tasks');
+    const res = await fetch(`${process.env.REACT_APP_DB_URL}/tasks`);
     const data = await res.json();
     return data;
   }

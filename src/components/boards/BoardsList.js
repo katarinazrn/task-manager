@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import CurrentBoardContext from "../../store/CurrentBoardContext";
+import Loading from "../ui/loading/Loading";
 import classes from './Board.module.css';
 import NewBoard from "./NewBoard";
 
@@ -11,11 +12,11 @@ function BoardsList() {
 
     useEffect(() => {
         fetchList()
-    }, [currentBoardCtx.board]);
+    }, [currentBoardCtx.totalBoards]);
 
     function fetchList() {
         setLoading(true);
-        fetch('http://localhost:3000/boards')
+        fetch(`${process.env.REACT_APP_DB_URL}/boards`)
             .then(res => res.json())
             .then(data => {
                 if (Object.keys(currentBoardCtx.board).length === 0 && data.length > 0) currentBoardCtx.changeBoard(data[0])
@@ -29,7 +30,7 @@ function BoardsList() {
     }
 
     if (loading) {
-        return <p>loading...</p>
+        return <Loading />
     }
 
     return (

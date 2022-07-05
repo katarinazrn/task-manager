@@ -29,7 +29,7 @@ function BoardDetails(props) {
     }
 
     async function changeTitle() {
-        let res = await fetch(`http://localhost:3000/boards/${currentBoardCtx.board.id}`, {
+        let res = await fetch(`${process.env.REACT_APP_DB_URL}/boards/${currentBoardCtx.board.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ function BoardDetails(props) {
 
         tasks.forEach(task => tasksCtx.removeTask(task.id));
 
-        let res = await fetch(`http://localhost:3000/boards/${boardId}`, {
+        let res = await fetch(`${process.env.REACT_APP_DB_URL}/boards/${boardId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

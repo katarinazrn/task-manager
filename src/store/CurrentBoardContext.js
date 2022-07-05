@@ -3,19 +3,27 @@ import { createContext, useState } from "react";
 const CurrentBoardContext = createContext({
     board: {},
     changeBoard: () => { },
-    initBoard: () => { }
+    initBoard: () => { },
+    totalBoards: 0,
+    setTotal: () => { }
 })
 
 export function CurrentBoardContextProvider(props) {
 
     const [board, setBoard] = useState({});
+    const [totalBoards, setTotalBoards] = useState(0);
 
     function initBoard() {
-        fetch('http://localhost:3000/boards')
+        fetch(`${process.env.REACT_APP_DB_URL}/boards`)
             .then(res => res.json())
             .then(data => {
+                setTotalBoards(data.length);
                 if (data.length > 0) setBoard(data[0])
             })
+    }
+
+    function setTotal(total) {
+        setTotalBoards(total)
     }
 
     function changeBoard(newBoard) {
@@ -25,7 +33,9 @@ export function CurrentBoardContextProvider(props) {
     let context = {
         board,
         initBoard,
-        changeBoard
+        changeBoard,
+        totalBoards,
+        setTotal
     }
 
     return (

@@ -1,0 +1,35 @@
+.loading {
+    display: flex;
+    margin: auto;
+}
+
+.dot {
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 90px 3px;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 0.9s;
+    background-color: rgb(116, 88, 241);
+    animation-timing-function: linear;
+}
+
+.loading :nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loading :nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes move {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
