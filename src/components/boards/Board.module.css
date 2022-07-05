@@ -1,0 +1,76 @@
+.list {
+    color: rgb(145, 140, 190);
+    box-sizing: border-box;
+}
+
+.list h3 {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.list ul {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item {
+    box-sizing: border-box;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    width: 19vw;
+    margin-right: 1vw;
+}
+
+span {
+    background-color: transparent;
+    padding-right: 5px;
+}
+
+.item:hover {
+    background-color: rgb(105, 66, 243);
+    color: white;
+}
+
+.button {
+    color: rgb(106, 73, 197);
+}
+
+.input {
+    border: 2px solid rgb(106, 73, 197);
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    z-index: 100;
+    position: relative;
+    margin-top: 10px;
+}
+
+.input:hover {
+    background-color: transparent;
+}
+
+.current {
+    background-color: rgb(105, 66, 243);
+    color: white;
+}
+
+.input input {
+    color: white;
+    outline: none;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.plus {
+    cursor: pointer;
+    font-weight: bold;
+}

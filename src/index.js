@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CurrentBoardContextProvider } from './store/CurrentBoardContext';
+import { TasksContextProvider } from './store/TasksContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <CurrentBoardContextProvider>
+      <TasksContextProvider>
+        <App />
+      </TasksContextProvider>
+    </CurrentBoardContextProvider>
   </React.StrictMode>
 );
 

@@ -1,0 +1,64 @@
+.task {
+    background-color: rgb(31, 27, 43);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.description {
+    color: rgb(179, 179, 179) !important;
+}
+
+.more {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+}
+
+.modal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    min-width: 350px;
+}
+
+.modal * {
+    color: whitesmoke;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+}
+
+.status select {
+    margin-top: 10px;
+    border: 1px solid rgb(60, 60, 70);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.saveButton {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: rgb(105, 66, 243);
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 28px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

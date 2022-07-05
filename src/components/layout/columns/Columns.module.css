@@ -1,0 +1,104 @@
+.columns {
+    background-color: rgb(20, 17, 26);
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    min-width: 80vw;
+}
+
+.newColumn {
+    margin: auto 0;
+    background-color: rgb(20, 17, 26);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.newColumn button {
+    background-color: rgb(20, 17, 26);
+    color: whitesmoke;
+    margin: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.column {
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    background-color: rgb(20, 17, 26);
+    min-width: 200px;
+}
+
+.status {
+    background-color: rgb(20, 17, 26);
+    display: flex;
+    padding-left: 10px;
+}
+
+.status h4 {
+    background-color: transparent;
+    color: rgb(117, 117, 122);
+}
+
+.circle {
+    display: block;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border-radius: 50%;
+    margin: auto 0;
+    margin-right: 7px;
+}
+
+
+.list {
+    color: rgb(145, 140, 190);
+}
+
+.list h3 {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.list ul {
+    padding: 0;
+}
+
+.input {
+    margin: auto 0;
+    background-color: rgb(20, 17, 26);
+    border: 2px solid rgb(106, 73, 197);
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    z-index: 100;
+    position: relative;
+}
+
+
+.input input {
+    color: white;
+    outline: none;
+    width: 100%;
+    border: none;
+    background-color: rgb(20, 17, 26);
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.input span {
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(20, 17, 26);
+}

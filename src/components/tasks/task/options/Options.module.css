@@ -1,0 +1,14 @@
+.options {
+    display: flex;
+}
+
+.edit,
+.delete {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(105, 66, 243);
+    font-size: 12px;
+    margin-right: 10px;
+}

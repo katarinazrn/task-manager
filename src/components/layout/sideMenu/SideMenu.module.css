@@ -1,0 +1,60 @@
+.menu {
+    position: relative;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px rgba(2, 2, 2, 0.74);
+    min-height: 100vh;
+    margin-left: 0;
+    transition: margin 0.5s cubic-bezier(0.1, 0.5, 0.6, 1);
+}
+
+.hiddenMenu {
+    margin-left: -20vw;
+}
+
+.logo {
+    display: flex;
+    width: fit-content;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(45deg, rgb(197, 56, 233), rgb(61, 43, 218));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo img {
+    opacity: 0.5;
+    width: 20px;
+    margin: auto 8px;
+}
+
+
+.toggleButton {
+    position: fixed;
+    color: rgb(105, 105, 124);
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    bottom: 20px;
+    left: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.toggleButton:hover {
+    color: whitesmoke;
+}
+
+.toggleButton span {
+    margin: auto 0;
+    padding: 3px;
+    padding-right: 10px;
+}

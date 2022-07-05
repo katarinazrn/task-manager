@@ -1,0 +1,42 @@
+.input {
+    display: flex;
+    margin-top: 5px;
+    border: 1px solid rgb(60, 60, 70);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.content {
+    padding: 30px 12px;
+    border-radius: 5px;
+    min-width: 250px;
+}
+
+.title {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.save {
+    background-color: transparent !important;
+}
+
+.delete {
+    margin-top: 40px !important;
+    background-color: salmon !important;
+}
+
+.titleContainer {
+    display: flex;
+}
+
+.titleContainer span {
+    margin: auto 0;
+    margin-left: auto;
+    color: whitesmoke;
+    cursor: pointer;
+}
